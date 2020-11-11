@@ -1,13 +1,13 @@
 [index]
-drone01 = 2
-drone02 = 3
-drone03 = 4
-drone04 = 5
-drone05 = 6
-drone06 = 7
-drone07 = 8
-drone08 = 9
-drone09 = 10
+drone01 = 1
+drone02 = 2
+drone03 = 3
+drone04 = 4
+drone05 = 5
+drone06 = 6
+drone07 = 7
+drone08 = 8
+drone09 = 9
 drone10 = 11
 drone11 = 12
 drone12 = 13

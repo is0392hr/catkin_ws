@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
 <launch>
-    <node name="voronoi" pkg="multi_robot_unity" type="new_voronoi.py" output="screen"/>
-    <node name="d1" pkg="multi_robot_unity" type="new_d1.py" output="screen"/>
-    <node name="d2" pkg="multi_robot_unity" type="new_d2.py" output="screen"/>
-    <node name="d3" pkg="multi_robot_unity" type="new_d3.py" output="screen"/>
-    <node name="d4" pkg="multi_robot_unity" type="new_d4.py" output="screen"/>
-    <node name="d5" pkg="multi_robot_unity" type="new_d5.py" output="screen"/>
+    <node name="d1" pkg="multi_robot_unity" type="new_d1.py" />
+    <node name="d2" pkg="multi_robot_unity" type="new_d2.py" />
+    <node name="d3" pkg="multi_robot_unity" type="new_d3.py" />
+    <node name="d4" pkg="multi_robot_unity" type="new_d4.py"/>
+    <node name="d5" pkg="multi_robot_unity" type="new_d5.py" />
+    <node name="d6" pkg="multi_robot_unity" type="new_d6.py" />
+    <node name="d7" pkg="multi_robot_unity" type="new_d7.py" />
+    <node name="d8" pkg="multi_robot_unity" type="new_d8.py" />
+    <node name="d9" pkg="multi_robot_unity" type="new_d9.py" />
+    <node name="voronoi" pkg="multi_robot_unity" type="get_pose.py" output="screen"/>
 </launch>

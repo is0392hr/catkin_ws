@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+import numpy as np
+D = 5.0
+
+for i in np.arange(0.0, 5.0, 0.01):
+    b = -float((20.0/(D**7))*(i**7) - (70.0/(D**6))*(i**6) + (84.0/(D**5))*(i**5) - (35.0/(D**4))*(i**4) +1)
+    plt.plot(i, b, 'x')
+
+plt.show()

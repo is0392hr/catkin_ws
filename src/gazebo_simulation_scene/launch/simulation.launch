@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+		<arg name="port" value="9090"/>
+	</include>
+	<node name="file_server" pkg="file_server" type="file_server" output="screen"/>
+	<!-- <include file="$(find hector_quadrotor_gazebo)/launch/quadrotor_empty_world.launch">
+	</include> -->
+	<!-- <include file="$(find multi_robot_unity)/launch/drone_unity.launch"></include>
+	<node name="joy_to_twist" pkg="gazebo_simulation_scene" type="joy_to_twist.py" output="screen"/> -->
+	<!-- <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" output="screen"/> -->
+	
+	<!-- <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="0" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d1.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="1" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d2.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="2" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d3.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="3" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d4.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="4" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d5.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="5" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d6.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="6" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d7.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="7" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d8.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="8" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d9.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="9" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d10.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="10" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d11.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="11" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d12.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="12" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d13.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="13" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d14.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="14" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d15.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="15" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d16.launch" />
+  	</include>
+  	<include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    	<arg name="time" value="16" />
+    	<arg name="pkg" value="gazebo_simulation_scene" />
+    	<arg name="file" value="odom_d17.launch" />
+  	</include> -->
+	<!-- <node name="odom_d1" pkg="gazebo_simulation_scene" type="odom_d1.py" output="screen" />
+	<node name="odom_d2" pkg="gazebo_simulation_scene" type="odom_d2.py" output="screen" />
+	<node name="odom_d3" pkg="gazebo_simulation_scene" type="odom_d3.py" output="screen" />
+	<node name="odom_d4" pkg="gazebo_simulation_scene" type="odom_d4.py" output="screen" />
+	<node name="odom_d5" pkg="gazebo_simulation_scene" type="odom_d5.py" output="screen" />
+	<node name="odom_d6" pkg="gazebo_simulation_scene" type="odom_d6.py" output="screen" />
+	<node name="odom_d7" pkg="gazebo_simulation_scene" type="odom_d7.py" output="screen" />
+	<node name="odom_d8" pkg="gazebo_simulation_scene" type="odom_d8.py" output="screen" />
+	<node name="odom_d9" pkg="gazebo_simulation_scene" type="odom_d9.py" output="screen" />
+	<node name="odom_d10" pkg="gazebo_simulation_scene" type="odom_d10.py" output="screen" />
+	<node name="odom_d11" pkg="gazebo_simulation_scene" type="odom_d11.py" output="screen" />
+	<node name="odom_d12" pkg="gazebo_simulation_scene" type="odom_d12.py" output="screen" />
+	<node name="odom_d13" pkg="gazebo_simulation_scene" type="odom_d13.py" output="screen" />
+	<node name="odom_d14" pkg="gazebo_simulation_scene" type="odom_d14.py" output="screen" />
+	<node name="odom_d15" pkg="gazebo_simulation_scene" type="odom_d15.py" output="screen" />
+	<node name="odom_d16" pkg="gazebo_simulation_scene" type="odom_d16.py" output="screen" />
+	<node name="odom_d17" pkg="gazebo_simulation_scene" type="odom_d17.py" output="screen" /> -->
+</launch>

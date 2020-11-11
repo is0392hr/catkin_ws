@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/><arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find multi_robot)/worlds/flood_circle.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d1.launch" />
+    <arg name="node_name" value="d1" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="4" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d2.launch" />
+    <arg name="node_name" value="d2" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="6" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d3.launch" />
+    <arg name="node_name" value="d3" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="8" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d4.launch" />
+    <arg name="node_name" value="d4" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="10" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d5.launch" />
+    <arg name="node_name" value="d5" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="12" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d6.launch" />
+    <arg name="node_name" value="d6" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="14" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d7.launch" />
+    <arg name="node_name" value="d7" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="16" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d8.launch" />
+    <arg name="node_name" value="d8" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="18" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d9.launch" />
+    <arg name="node_name" value="d9" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="20" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d10.launch" />
+    <arg name="node_name" value="d10" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="22" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d11.launch" />
+    <arg name="node_name" value="d11" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="24" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d12.launch" />
+    <arg name="node_name" value="d12" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="26" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d13.launch" />
+    <arg name="node_name" value="d13" />
+  </include> -->
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="28" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d14.launch" />
+    <arg name="node_name" value="d14" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="30" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d15.launch" />
+    <arg name="node_name" value="d15" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="32" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d16.launch" />
+    <arg name="node_name" value="d16" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="34" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d17.launch" />
+    <arg name="node_name" value="d17" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="36" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d18.launch" />
+    <arg name="node_name" value="d18" />
+  </include> -->
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="38" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d19.launch" />
+    <arg name="node_name" value="d19" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="40" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d20.launch" />
+    <arg name="node_name" value="d20" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="42" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d21.launch" />
+    <arg name="node_name" value="d21" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="44" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d22.launch" />
+    <arg name="node_name" value="d22" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="46" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d23.launch" />
+    <arg name="node_name" value="d23" />
+  </include> -->
+
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="48" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d24.launch" />
+    <arg name="node_name" value="d24" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="50" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d25.launch" />
+    <arg name="node_name" value="d25" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="52" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d26.launch" />
+    <arg name="node_name" value="d26" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="54" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d27.launch" />
+    <arg name="node_name" value="d27" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="56" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d28.launch" />
+    <arg name="node_name" value="d28" />
+  </include> -->
+
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="58" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d29.launch" />
+    <arg name="node_name" value="d29" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="60" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d30.launch" />
+    <arg name="node_name" value="d30" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="62" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d31.launch" />
+    <arg name="node_name" value="d31" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="64" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d32.launch" />
+    <arg name="node_name" value="d32" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="66" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d33.launch" />
+    <arg name="node_name" value="d33" />
+  </include> -->
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="68" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d34.launch" />
+    <arg name="node_name" value="d34" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="70" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d35.launch" />
+    <arg name="node_name" value="d35" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="72" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d36.launch" />
+    <arg name="node_name" value="d36" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="74" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d37.launch" />
+    <arg name="node_name" value="d37" />
+  </include>
+<!-- 
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="76" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d38.launch" />
+    <arg name="node_name" value="d38" />
+  </include> -->
+</launch>

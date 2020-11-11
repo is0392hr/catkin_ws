@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor.gazebo.xacro" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find multi_robot)/worlds/animated_box.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <group ns="drone01">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone01"/>
+      <arg name="tf_prefix" value="drone01"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="0.0"/>
+      <arg name="y" value="1"/>
+    </include>
+  </group>
+
+  <group ns="drone02">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone02"/>
+      <arg name="tf_prefix" value="drone02"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="0.86"/>
+      <arg name="y" value="-0.5"/>
+    </include>
+  </group>
+
+  <group ns="drone03">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone03"/>
+      <arg name="tf_prefix" value="drone03"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="-0.86"/>
+      <arg name="y" value="-0.5"/>
+    </include>
+  </group>
+
+  <group ns="drone04">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone04"/>
+      <arg name="tf_prefix" value="drone04"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="0.86"/>
+      <arg name="y" value="0.5"/>
+    </include>
+  </group>
+
+  <group ns="drone05">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone05"/>
+      <arg name="tf_prefix" value="drone05"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="0.0"/>
+      <arg name="y" value="-1"/>
+    </include>
+  </group>
+
+  <group ns="drone06">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone06"/>
+      <arg name="tf_prefix" value="drone06"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="-0.86"/>
+      <arg name="y" value="0.5"/>
+    </include>
+  </group>
+
+  <group ns="drone1">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone1"/>
+      <arg name="tf_prefix" value="drone1"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="3.0"/>
+      <arg name="y" value="3.0"/>
+    </include>
+  </group>
+  
+  <group ns="drone2">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone2"/>
+      <arg name="tf_prefix" value="drone2"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="3.0"/>
+      <arg name="y" value="-3.0"/>
+    </include>
+  </group>
+
+  <group ns="drone3">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone3"/>
+      <arg name="tf_prefix" value="drone3"/>
+      <arg name="model" value="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+      <arg name="x" value="-3.0"/>
+      <arg name="y" value="-3.0"/>
+    </include>
+  </group>
+
+
+</launch>

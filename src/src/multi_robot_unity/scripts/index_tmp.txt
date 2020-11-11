@@ -1,0 +1,15 @@
+[index]
+drone01 = 10
+drone02 = 11
+drone03 = 12
+drone04 = 13
+drone05 = 14
+drone06 = 15
+drone07 = 16
+drone08 = 17
+drone09 = 18
+drone10 = 19
+drone11 = 20
+drone12 = 21
+drone13 = 22
+dist = 30

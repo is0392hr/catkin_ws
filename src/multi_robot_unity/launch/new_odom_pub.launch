@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="joy_to_twist" pkg="gazebo_simulation_scene" type="joy_to_twist.py" output="screen"/>  
+  <node name="odom_d1" pkg="gazebo_simulation_scene" type="odom_d1.py" output="screen" />
+  <node name="odom_d2" pkg="gazebo_simulation_scene" type="odom_d2.py" output="screen" />
+  <node name="odom_d3" pkg="gazebo_simulation_scene" type="odom_d3.py" output="screen" />
+  <node name="odom_d4" pkg="gazebo_simulation_scene" type="odom_d4.py" output="screen" />
+  <node name="odom_d5" pkg="gazebo_simulation_scene" type="odom_d5.py" output="screen" />
+</launch>

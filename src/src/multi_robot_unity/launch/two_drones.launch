@@ -1,0 +1,17 @@
+<launch>
+  <group ns="drone1">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone1" />
+      <arg name="tf_prefix" value="drone1" />
+      <arg name="y" value="-1.0" />
+    </include>
+  </group>
+  <group ns="drone2">
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="name" value="drone2" />
+      <arg name="tf_prefix" value="drone2" />
+      <arg name="y" value="1.0" />
+    </include>
+  </group>
+
+</launch>

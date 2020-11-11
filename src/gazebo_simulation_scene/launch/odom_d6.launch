@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>	
+	<node name="odom_d6" pkg="gazebo_simulation_scene" type="odom_d6.py" output="screen" />	
+</launch>

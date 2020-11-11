@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/><arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find multi_robot)/worlds/flood_circle.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d1.launch" />
+    <arg name="node_name" value="d1" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="4" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d2.launch" />
+    <arg name="node_name" value="d2" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="6" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d3.launch" />
+    <arg name="node_name" value="d3" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="8" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d4.launch" />
+    <arg name="node_name" value="d4" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="10" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d5.launch" />
+    <arg name="node_name" value="d5" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="12" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d6.launch" />
+    <arg name="node_name" value="d6" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="14" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d7.launch" />
+    <arg name="node_name" value="d7" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="16" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d8.launch" />
+    <arg name="node_name" value="d8" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="18" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d9.launch" />
+    <arg name="node_name" value="d9" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="20" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d10.launch" />
+    <arg name="node_name" value="d10" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="22" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d11.launch" />
+    <arg name="node_name" value="d11" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="24" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d12.launch" />
+    <arg name="node_name" value="d12" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="26" />
+    <arg name="pkg" value="multi_robot" />
+    <arg name="file" value="d13.launch" />
+    <arg name="node_name" value="d13" />
+  </include> 
+
+ 
+<!-- 
+  <group ns="drone01">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone01"/>
+  <arg name="tf_prefix" value="drone01"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+  <arg name="x" default="-6.0"/>
+  <arg name="y" default="15.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+  
+  <group ns="drone02">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone02"/>
+  <arg name="tf_prefix" value="drone02"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+  <arg name="x" default="-15.0"/>
+  <arg name="y" default="6.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone03">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone03"/>
+  <arg name="tf_prefix" value="drone03"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_blue.gazebo.xacro"/>
+  <arg name="x" default="-12.0"/>
+  <arg name="y" default="12.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone04">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone04"/>
+  <arg name="tf_prefix" value="drone04"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-16.0"/>
+  <arg name="y" default="7.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+<group ns="drone05">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone05"/>
+  <arg name="tf_prefix" value="drone05"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-17.0"/>
+  <arg name="y" default="8.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone06">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone06"/>
+  <arg name="tf_prefix" value="drone06"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-18.0"/>
+  <arg name="y" default="9.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone07">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone07"/>
+  <arg name="tf_prefix" value="drone07"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-9.0"/>
+  <arg name="y" default="18.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone08">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone08"/>
+  <arg name="tf_prefix" value="drone08"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-8.0"/>
+  <arg name="y" default="17.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+
+  <group ns="drone09">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone09"/>
+  <arg name="tf_prefix" value="drone09"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-7.0"/>
+  <arg name="y" default="16.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone10">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone10"/>
+  <arg name="tf_prefix" value="drone10"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_red.gazebo.xacro"/>
+  <arg name="x" default="-12.0"/>
+  <arg name="y" default="10.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone11">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone11"/>
+  <arg name="tf_prefix" value="drone11"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_red.gazebo.xacro"/>
+  <arg name="x" default="-10.0"/>
+  <arg name="y" default="12.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone12">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone12"/>
+  <arg name="tf_prefix" value="drone12"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_red.gazebo.xacro"/>
+  <arg name="x" default="-12.0"/>
+  <arg name="y" default="14.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group>
+
+  <group ns="drone13">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone13"/>
+  <arg name="tf_prefix" value="drone13"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_red.gazebo.xacro"/>
+  <arg name="x" default="-14.0"/>
+  <arg name="y" default="12.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+  </include>
+  </group> -->
+</launch>

@@ -1,0 +1,28 @@
+ClearAll["Global`*"]
+homepath="~/my_ros_pkgs";
+saveToFile[M_]:=Export[FileNameJoin[{homepath,"dataExchangeMath2ROS.csv"}],M,"CSV"];
+loadFromFile:=Import[FileNameJoin[{homepath,"dataExchangeROS2Math.csv"}]];(*Format:[posX,posY,posZ,linVelX,linVelY,linVelZ,angVelX,angVelY,angVelZ,yaw]*)
+numofbots :=Length[dataoutput];(*Number of agents*)
+dim=2;(*Dimension of the simulation*)(*Parameters for the model*)
+=1;
+=5;
+=10;
+c=109;
+l=34;
+h=4;(*Step size*)
+rtf=.18;(*Approximate real time factor of the system. Displayed in Gazebo*)
+u[pos_]:=c*^-Sqrt[Sum[pos[[i]]^2+.01,{i,2}]]l-^-Sqrt[Sum[pos[[i]]^2+.01,{i,2}]];(*Swarm potential function*)(*Gradient of potential function:*)
+gradu[pos_]:=Grad[u[Table[x[i],{i,3}]], Table[x[i],{i,3}]]/. Table[x[i]pos[[i]],{i,3}];(*Measure the velocity from Gazebo. Note that Gazebo gives thevelocity in terms of global, not local coordinates.*)
+
+velocityMeasured[data_]:=Table[{data[[i]][[4]],data[[i]][[5]],data[[i]][[6]]},{i, numofbots}](*Measure position*)
+
+position[data_]:=Table[{data[[i]][[1]],data[[i]][[2]],data[[i]][[3]]},{i, Length[data]}];(*Equation for the model*)
+
+rhs[data_]:=Table -*Sum[data[[i]][[j]]^2,{j,4,6}]*Table[data[[i]][[j]],{j,4,6}]-numofbots*Sum[gradu[Table[data[[i]][[k]]-data[[j]][[k]],{k,3}]],{j, numofbots}]+{0, 0, 5-data[[i]][[3]]-data[[i]][[6]]},{i, numofbots}Printed by Wolfram Mathematica Student Edition
+(*Find desired velocity, rotate it, and then format it to export*)
+
+vDesired[data_]:=velocityMeasured[data]+h*rtf*rhs[data];
+
+vRotated[data_]:=ParallelTable[RotationMatrix[-data[[i]][[10]],{0, 0, 1}].vDesired[data][[i]],{i, Length[data]}];
+
+commandMatrix[vec_]:=Table[{vec[[i]][[1]],vec[[i]][[2]],vec[[i]][[3]],0,0,0},{i, Length[vec]}](*Run this to create the scheduled task*)(*REMEMBER TO ENABLE T

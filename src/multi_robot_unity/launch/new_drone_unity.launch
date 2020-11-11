@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/><arg name="headless" default="false"/>
+  <arg name="debug" default="true"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find multi_robot_unity)/worlds/empty.world"/> <!-- flood_circle.world -->
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <!-- <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+    <arg name="port" value="9090"/>
+  </include>
+  <node name="file_server" pkg="file_server" type="file_server" output="screen"/>
+ -->
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="4" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d1.launch" />
+    <arg name="node_name" value="d1" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="6" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d2.launch" />
+    <arg name="node_name" value="d2" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="8" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d3.launch" />
+    <arg name="node_name" value="d3" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="10" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d4.launch" />
+    <arg name="node_name" value="d4" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="12" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d5.launch" />
+    <arg name="node_name" value="d5" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="14" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d6.launch" />
+    <arg name="node_name" value="d6" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="16" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d7.launch" />
+    <arg name="node_name" value="d7" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="18" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d8.launch" />
+    <arg name="node_name" value="d8" />
+  </include>
+
+    <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="20" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_d9.launch" />
+    <arg name="node_name" value="d9" />
+  </include>
+<!--   <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="12" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_simulation.launch" />
+    <arg name="node_name" value="simulation" />
+  </include>
+ -->
+  <!-- <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="18" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="new_odom_pub.launch" />
+    <arg name="node_name" value="odom_pub" />
+  </include> -->
+
+<!--   <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="22" />
+    <arg name="pkg" value="multi_robot_unity" />
+    <arg name="file" value="control.launch" />
+    <arg name="node_name" value="control_pub" />
+  </include> -->
+
+</launch>

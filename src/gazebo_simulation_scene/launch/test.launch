@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+		<arg name="port" value="9090"/>
+	</include>
+	<node name="file_server" pkg="file_server" type="file_server" output="screen"/>
+	<!-- <include file="$(find hector_quadrotor_gazebo)/launch/quadrotor_empty_world.launch">
+	</include> -->
+	<include file="$(find multi_robot_unity)/launch/drone_unity.launch"></include>
+	<!-- <node name="joy_to_twist" pkg="gazebo_simulation_scene" type="joy_to_twist.py" output="screen"/> -->
+	<!-- <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" output="screen"/> -->
+	
+	<!-- <node name="odom_d1" pkg="gazebo_simulation_scene" type="odom_d1.py" output="screen" /> -->
+</launch>

@@ -1,0 +1,102 @@
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/><arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find multi_robot)/worlds/flood_circle.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <group ns="drone01">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone01"/>
+  <arg name="tf_prefix" value="drone01"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+  <arg name="x" default="11.0"/>
+  <arg name="y" default="11.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  </group>
+  
+  <group ns="drone02">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone02"/>
+  <arg name="tf_prefix" value="drone02"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+  <arg name="x" default="-7.0"/>
+  <arg name="y" default="-13.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  </group>
+
+  <group ns="drone03">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone03"/>
+  <arg name="tf_prefix" value="drone03"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="16.0"/>
+  <arg name="y" default="10.5"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  </group>
+
+  <group ns="drone04">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone04"/>
+  <arg name="tf_prefix" value="drone04"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-11.0"/>
+  <arg name="y" default="-11.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  </group>
+
+<group ns="drone05">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone05"/>
+  <arg name="tf_prefix" value="drone05"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-13.0"/>
+  <arg name="y" default="-13.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  </group>
+
+  <group ns="drone06">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone06"/>
+  <arg name="tf_prefix" value="drone06"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="-9.0"/>
+  <arg name="y" default="-11.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  </group>
+
+  <group ns="drone07">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone07"/>
+  <arg name="tf_prefix" value="drone07"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="12.0"/>
+  <arg name="y" default="12.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  </group>
+
+  <group ns="drone08">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone08"/>
+  <arg name="tf_prefix" value="drone08"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam_black.gazebo.xacro"/>
+  <arg name="x" default="13.0"/>
+  <arg name="y" default="10.0"/>
+  <arg name="z" default="0.2"/>
+  </include>
+  </group>
+</launch>

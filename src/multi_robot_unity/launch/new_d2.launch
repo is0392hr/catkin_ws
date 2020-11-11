@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+<group ns="drone02">
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+  <arg name="name" default="drone02"/>
+  <arg name="tf_prefix" value="drone02"/>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_downward_cam.gazebo.xacro"/>
+<!--   <arg name="x" default="-10.0"/>
+  <arg name="y" default="22.0"/>
+  <arg name="z" default="0.2"/> -->
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="2.0"/>
+  <arg name="z" default="0.1"/>
+  </include>
+  </group>
+  <node pkg="rosservice" type="rosservice" name="enable_motors_d2" args="call --wait /drone02/enable_motors true"/>
+</launch>

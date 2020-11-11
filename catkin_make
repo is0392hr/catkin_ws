@@ -1,0 +1,1 @@
+./src/catkin/bin/catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
